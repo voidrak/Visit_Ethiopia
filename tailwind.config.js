@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        SupremeRegular: ["SupremeRegular", "ui-sans-serif"],
+        ClashGrotesk: ["ClashGrotesk", "ui-sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
