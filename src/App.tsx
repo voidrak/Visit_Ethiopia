@@ -1,9 +1,11 @@
 import React from "react";
+import "./App.css";
+import HeroSection from "./Components/HeroSection/HeroSection";
 
 const App = () => {
   return (
-    <div className="bg-black text-7xl h-screen text-white font-ClashGrotesk  ">
-      App
+    <div>
+      <HeroSection />
     </div>
   );
 };
