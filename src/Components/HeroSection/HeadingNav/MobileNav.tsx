@@ -72,7 +72,7 @@ const MobileNav = () => {
       ref={navRef}
       //   onMouseEnter={handleMouseEnter}
       //   onMouseLeave={handleMouseLeave}
-      className=" fixed right-0 top-0 z-50 overscroll-contain md:hidden   "
+      className=" fixed right-0 top-0 z-50 overscroll-contain min-[850px]:hidden   "
     >
       <div
         onClick={() => {
@@ -128,7 +128,7 @@ const MobileNav = () => {
                     animate="enter"
                     exit="exit"
                     href={item.href}
-                    className="    duration-400 z-10 font-[300] transition-all first-letter:uppercase hover:font-semibold hover:text-gold-accent"
+                    className=" text-[42px]   duration-400 z-10 font-[300] transition-all first-letter:uppercase hover:font-semibold hover:text-gold-accent"
                   >
                     {item.title}
                   </motion.a>

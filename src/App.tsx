@@ -4,7 +4,7 @@ import HeroSection from "./Components/HeroSection/HeroSection";
 
 const App = () => {
   return (
-    <div>
+    <div className="font-SupremeRegular">
       <HeroSection />
     </div>
   );
