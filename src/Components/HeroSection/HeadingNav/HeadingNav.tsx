@@ -75,9 +75,7 @@ const HeadingNav = () => {
               id="auth"
               className="outline-none bg-gold-accent p-1 rounded-sm"
             >
-              <option value="login" selected>
-                Login
-              </option>
+              <option value="login">Login</option>
               <option value="signUp">Sign up</option>
             </select>
           </form>

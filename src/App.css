@@ -26,3 +26,6 @@ body {
 .ham1 .bottom {
   stroke-dasharray: 40 180;
 }
+.text-clamp-large {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}

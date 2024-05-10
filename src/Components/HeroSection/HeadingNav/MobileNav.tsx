@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Curve from "./Curve";
 import OutsideClick from "../../../Hooks/OutsideClick";
 const MobileNav = () => {
-  const [isNavOpen, setIsNavOpen] = useState<boolean>(true);
+  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const navRef = useRef<HTMLDivElement>(null);
 
