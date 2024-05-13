@@ -8,15 +8,15 @@ export default {
         "bg-color": "#161b23",
       },
       fontFamily: {
-        SupremeRegular: ["SupremeRegular", "ui-sans-serif"],
+        ClashDisplay: ["ClashDisplay", "ui-sans-serif"],
         ClashGrotesk: ["ClashGrotesk", "ui-sans-serif"],
       },
       transitionTimingFunction: {
         easeInSine: "cubic-bezier(0.12, 0, 0.39, 0);",
       },
       fontSize: {
-        "clamp-small": "clamp(56px, 12vw, 96px)",
-        "clamp-large": "clamp(75px, 20vw, 384px)",
+        // "clamp-small": "clamp(40px, 10vw, 96px)",
+        // "clamp-large": "clamp(75px, 15vw, 384px)",
       },
     },
   },
