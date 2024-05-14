@@ -49,7 +49,7 @@ const MainHero = () => {
         </motion.h1>
       </motion.div>
       <div className=" overflow-x-hidden absolute top-[36%] sm:top-[30%] min-[500px]:left-[5vw] lg:left-[7vw] z-10 w-[90vw] max-w-[900px] min-[1128px]:left-[12vw] xl:max-w-[70vw] min-[1400px]:max-w-[65vw] min-[1560px]:max-w-[63vw] min-[1645px]:max-w-[60vw]  min-[1400px]:left-[17vw]">
-        {/* <img src="images/LallibelaPic.png" alt="" className="w-full h-full" /> */}
+        <img src="images/LallibelaPic.png" alt="" className="w-full h-full" />
       </div>
     </div>
   );
