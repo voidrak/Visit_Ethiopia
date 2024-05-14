@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import MainHero from "./MainHero";
+import { useEffect, useState } from "react";
 import MobileNav from "./HeadingNav/MobileNav";
-import { animate, motion, stagger } from "framer-motion";
-import { delay, easeIn } from "framer-motion/dom";
+import { motion } from "framer-motion";
+import { easeIn } from "framer-motion/dom";
 
 const HeroSection = () => {
   const [isImageLoaded, setImageLoaded] = useState<boolean>(false);
