@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { easeIn } from "framer-motion/dom";
 
 const HeroSection = () => {
-  const [isImageLoaded, setImageLoaded] = useState<boolean>(false);
   const [count, setCount] = useState<number>(0);
 
   const [isSearch, setIsSearch] = useState<boolean>(false);

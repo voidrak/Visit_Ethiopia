@@ -6,6 +6,8 @@ export default {
       colors: {
         "gold-accent": "#ffbe40",
         "bg-color": "#161b23",
+        "from-blue-gray": "rgba(22, 27, 35, 0)",
+        "to-blue-gray": "rgba(22, 27, 35, 1)",
       },
       fontFamily: {
         ClashDisplay: ["ClashDisplay", "ui-sans-serif"],

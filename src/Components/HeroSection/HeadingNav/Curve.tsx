@@ -28,7 +28,6 @@ const Curve = () => {
         initial="initial"
         animate="enter"
         exit="exit"
-        // d={initialPath}
       >
         {" "}
       </motion.path>

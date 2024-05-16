@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
 import "./App.css";
 import HeroSection from "./Components/HeroSection/HeroSection";
 import Features from "./Components/Features/Features";
+import Destination from "./Components/Destination/Destination";
 
 const App = () => {
   return (
@@ -9,6 +9,7 @@ const App = () => {
       <>
         <HeroSection />
         <Features />
+        <Destination />
       </>
     </div>
   );
