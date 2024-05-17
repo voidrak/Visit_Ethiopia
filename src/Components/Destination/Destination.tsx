@@ -14,7 +14,9 @@ const Destination = () => {
   const [activeButton, setActiveButton] = useState<string>("All");
   const windowSize = window.innerWidth;
   let indexMul: number;
-  if (windowSize <= 1200) {
+  if (windowSize < 1025) {
+    indexMul = 0;
+  } else if (windowSize <= 1200) {
     indexMul = 94;
   } else if (windowSize <= 1400) {
     indexMul = 84;
