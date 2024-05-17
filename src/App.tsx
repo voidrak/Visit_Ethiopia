@@ -4,19 +4,19 @@ import HeroSection from "./Components/HeroSection/HeroSection";
 import Features from "./Components/Features/Features";
 import Destination from "./Components/Destination/Destination";
 import ShouldVisit from "./Components/ShouldVisit/ShouldVisit";
+import { DestinationVideo } from "./Components/DestinationVideo/DestinationVideo";
 
 const App = () => {
   return (
     <ReactLenis root>
-      <div className="font-ClashGrotesk  overflow-x-hidden mb-[100vw]  ">
+      <div className="font-ClashGrotesk relative mb-[100vw]  ">
         <>
           <HeroSection />
           <Features />
           <Destination />
           <ShouldVisit />
-          {/* <div className="w-screen h-screen sticky top-0 left-0 bg-cover bg-violet-300 text-white z-10 bg-[url('/images/BG-IMG.png')]">
-          text
-        </div> */}
+          <DestinationVideo />
+          {/* <div className="h-screen bg-red-300 sticky top-0 left-0"></div> */}
         </>
       </div>
     </ReactLenis>

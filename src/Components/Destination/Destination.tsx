@@ -79,7 +79,6 @@ const Destination = () => {
       </button>
     </div>
   ));
-  console.log(activeButton);
   return (
     <div className="mt-16    mx-auto">
       <div className="controls-btn lg:px-16 px-4  2xl:px-[6rem]  flex justify-between items-center">
