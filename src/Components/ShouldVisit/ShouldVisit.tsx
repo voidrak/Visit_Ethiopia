@@ -1,6 +1,6 @@
 const ShouldVisit = () => {
   return (
-    <div className=" sticky top-0 left-0 w-screen h-screen bg-[url('images/should_visit_BG.png')] bg-cover bg-no-repeat">
+    <div className="  w-full h-screen bg-[url('images/should_visit_BG.png')] bg-cover bg-no-repeat">
       <div className="  flex  justify-center flex-col  w-full h-full overflow-x-hidden pr-3  mt-16 after:absolute after:top-0 after:left-0 after:bg-gradient-to-br from-transparent to-[#212730] after:-z-[1] isolate relative after:w-full after:h-full   min-[373px]:pr-4   ">
         <div className="flex flex-col items-end ml-auto  sm:max-w-[500px] max-w-[375px] sm:-translate-x-8  xl:-translate-x-16 2xl:-translate-x-24   ">
           <div className=" ">

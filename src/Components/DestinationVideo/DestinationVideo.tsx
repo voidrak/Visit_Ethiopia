@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   IoIosArrowDroprightCircle,
   IoIosArrowDropleftCircle,
@@ -15,7 +15,7 @@ interface videoInfoData {
 }
 export const DestinationVideo = () => {
   const [currentVideoId, setCurrentVideoId] = useState<string>("001");
-  const [videoData, setVideoData] = useState<videoInfoData[]>(videoInfoData);
+  const videoData = videoInfoData;
   const [isList, setIsList] = useState<boolean>(false);
 
   const ListVideos = videoData.filter((item) => item.id !== currentVideoId);
@@ -24,10 +24,9 @@ export const DestinationVideo = () => {
     setCurrentVideoId(id);
   }
   return (
-    <div className="h-screen pt-20 sm:pt-24 px-4 sticky bg-bg-color  top-0 left-0">
+    <div className="   pt-20 sm:pt-24 px-4       bg-bg-color   ">
       <div className="">
         <h1 className="font-extrabold text-3xl xl:text-6xl lg:text-5xl sm:text-4xl text-center font-ClashDisplay">
-          {" "}
           Videos To Makeup Your Mind
         </h1>
         <p className="text-center mt-4 lg:text-xl lg:w-[600px] xl:text-2xl  xl:w-[781px] text-gray-300  sm:text-lg sm:w-[510px] mx-auto">
@@ -39,7 +38,7 @@ export const DestinationVideo = () => {
         onClick={() => {
           setIsList(!isList);
         }}
-        className="flex items-center lg:hidden  text-gold-accent  gap-x-2 w-full justify-end mt-8 px-4"
+        className=" flex items-center lg:hidden cursor-pointer  text-gold-accent  gap-x-2 w-full justify-end mt-8 px-4"
       >
         {isList ? (
           <>
@@ -53,7 +52,7 @@ export const DestinationVideo = () => {
           </>
         )}
       </div>
-      <div className="relative min-[450px]:w-[90%]   lg:mt-8 lg:px-4 lg:container lg:w-full sm:w-[80%] md:w-[70%] mx-auto">
+      <div className="relative min-[450px]:w-[90%] cursor-pointer  lg:mt-8 lg:px-4 lg:container lg:w-full sm:w-[80%] md:w-[70%] mx-auto">
         <div className="video-part lg:grid lg:grid-cols-4 lg:items-center lg:gap-x-4 mt-4">
           <div className="playing-vid col-span-3 flex flex-col max-w-[850px] mx-auto ">
             <video
@@ -82,7 +81,7 @@ export const DestinationVideo = () => {
             </p>
           </div>
           <div
-            className={`list-vid w-full items-center left-0 top-0  lg:hidden  flex flex-col gap-y-3 absolute bg-bg-color ${
+            className={`list-vid w-full items-center  left-0 top-0  lg:hidden  flex flex-col gap-y-3 absolute bg-bg-color ${
               isList ? "" : "hidden"
             } `}
           >
