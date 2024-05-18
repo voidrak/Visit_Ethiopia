@@ -1,30 +1,17 @@
-# React + TypeScript + Vite
+<h1 align="center" id="title">Visit Ethiopia</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p id="description">Welcome to our website your ultimate guide to exploring the breathtaking tourist sites of Ethiopia. Discover the rich cultural heritage stunning landscapes and vibrant traditions that make Ethiopia a must-visit destination. With our user-friendly platform you can easily find and book hotels near your desired tourist sites ensuring a seamless and hassle-free travel experience. Start planning your Ethiopian adventure today and uncover the wonders of this remarkable country with ease and convenience.</p>
 
-Currently, two official plugins are available:
+ 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2>🕸️ Demo</h2>
+<p>https://visit-ethio.vercel.app/</p>
+  
+  
+<h2>💻 Built with</h2>
 
-## Expanding the ESLint configuration
+Technologies used in the project:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+*   REACT
+*   TAILWIND CSS
+*   TYPESCRIPT 
