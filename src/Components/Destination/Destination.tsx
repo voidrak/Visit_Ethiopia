@@ -80,7 +80,7 @@ const Destination = () => {
     </div>
   ));
   return (
-    <div className="mt-16    mx-auto">
+    <div className="mt-16  pr-3 pl-2   mx-auto">
       <div className="controls-btn lg:px-16 px-4  2xl:px-[6rem]  flex justify-between items-center">
         <div className="filter-btn space-x-8">
           <button
@@ -113,7 +113,7 @@ const Destination = () => {
           </button>
         </div>
 
-        <div className="swipe-btn   flex gap-x-4 mr-2">
+        <div className="swipe-btn   hidden lg:flex gap-x-4 mr-2">
           <button>
             <img
               src="images/pervious_arrow.png"

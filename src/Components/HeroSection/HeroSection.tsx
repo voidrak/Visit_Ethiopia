@@ -78,22 +78,22 @@ const HeroSection = () => {
   return (
     <>
       {count < 1 && (
-        <div className="absolute top-[50%]  right-[50%] flex items-center">
+        <div className="absolute right-[50%]  top-[50%] flex items-center">
           <span className="loader"></span>
         </div>
       )}
       <div
-        className={`relative h-screen bg-[url('images/BG-IMG.png')] bg-no-repeat bg-cover ${
+        className={`relative h-screen bg-[url('images/BG-IMG.png')] bg-cover bg-no-repeat ${
           count > 0 ? "opacity-1" : "opacity-0"
         }`}
       >
         {count > 1 && (
           <>
-            <div className="absolute top-0 right-0 z-20 w-full cursor-pointer  ">
+            <div className="absolute right-0 top-0 z-20 w-full cursor-pointer  ">
               <MobileNav />
-              <div className="w-full bg-transparent min-[1560px]:p-12 p-8 min-[850px]:flex hidden items-center justify-between">
+              <div className="hidden w-full items-center justify-between bg-transparent p-8 min-[850px]:flex min-[1560px]:p-12">
                 <nav className=" ">
-                  <ul className="flex gap-x-[15px] xl:gap-x-[22px] items-center ">
+                  <ul className="flex items-center gap-x-[15px] xl:gap-x-[22px] ">
                     <li className="mara-logo">
                       <a href="#">
                         <img src="images/MARA.png" alt="mara logo" />
@@ -105,7 +105,7 @@ const HeroSection = () => {
                           href={item.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[17px] lg:text-2xl xl:text-3xl hover:text-gold-accent "
+                          className="text-[17px] hover:text-gold-accent lg:text-2xl xl:text-3xl "
                         >
                           {item.title}
                         </a>
@@ -113,14 +113,14 @@ const HeroSection = () => {
                     ))}
                   </ul>
                 </nav>
-                <div className="flex gap-4 items-center ">
+                <div className="flex items-center gap-4 ">
                   <div
-                    className={`flex  items-center gap-x-2  
-                }`}
+                    className={`}  flex items-center  
+                gap-x-2`}
                   >
                     <input
                       type="text"
-                      className={`rounded-md p-1 transition-all ease-easeInSine duration-300 origin-right text-black border-none outline-none ${
+                      className={`origin-right rounded-md border-none p-1 text-black outline-none transition-all duration-300 ease-easeInSine ${
                         !isSearch ? "scale-x-0" : ""
                       }`}
                     />
@@ -144,7 +144,7 @@ const HeroSection = () => {
                     <select
                       name="auth"
                       id="auth"
-                      className="outline-none bg-gold-accent p-1 rounded-sm"
+                      className="rounded-sm bg-gold-accent p-1 outline-none"
                     >
                       <option value="login">Login</option>
                       <option value="signUp">Sign up</option>
@@ -153,35 +153,35 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            <div className="  px-4 w-full h-full relative translate-y-8 min-[850px]:translate-y-[-10vw]  sm:translate-y-0  xl:translate-y-[-8vw]">
+            <div className="  relative h-full w-full translate-y-8 px-4 sm:translate-y-0  min-[850px]:translate-y-[-10vw]  xl:translate-y-[-8vw]">
               <motion.div
                 variants={containerVariants}
                 initial="initial"
                 animate="animate"
                 whileInView={"animate"}
-                className="  overflow-hidden leading-[14vw] lg:leading-[10vw] min-[1400px]:leading-[12vw] lg:top-[45%]  tracking-[0.2em] z-[1] absolute top-[40%] left-[5vw] min-[1645px]:top-[40%]"
+                className="  absolute left-[5vw] top-[40%] z-[1] overflow-hidden  leading-[14vw] tracking-[0.2em] lg:top-[45%] lg:leading-[10vw] min-[1400px]:leading-[12vw] min-[1645px]:top-[40%]"
               >
                 <motion.h2
                   variants={textVariants}
-                  className="text-[10vw]  overflow-hidden min-[1400px]:text-[90px] min-[1650px]:text-[100px] min-[1800px]:text-[120px]  lg:text-[70px] xl:text-[80px] "
+                  className="overflow-hidden  text-[10vw] lg:text-[70px] xl:text-[80px] min-[1400px]:text-[90px]  min-[1650px]:text-[100px] min-[1800px]:text-[120px] "
                 >
                   DISCOVER
                 </motion.h2>
                 <motion.h1
                   variants={textVariants}
-                  className="text-[18vw] min-[1400px]:text-[18.5vw]     font-ClashDisplay  font-[900]"
+                  className="font-ClashDisplay text-[18vw]     font-[900]  min-[1400px]:text-[18.5vw]"
                 >
                   ETHIOPIA
                 </motion.h1>
               </motion.div>
-              <div className=" overflow-x-hidden absolute top-[36%] sm:top-[30%] min-[500px]:left-[5vw] lg:left-[7vw] z-10 w-[90vw] max-w-[900px] min-[1128px]:left-[12vw] xl:max-w-[70vw] min-[1400px]:max-w-[65vw] min-[1560px]:max-w-[63vw] min-[1645px]:max-w-[60vw]  min-[1400px]:left-[17vw]">
+              <div className=" absolute top-[36%] z-10 w-[90vw] max-w-[900px] overflow-x-hidden min-[500px]:left-[5vw] sm:top-[30%] lg:left-[7vw] min-[1128px]:left-[12vw] xl:max-w-[70vw] min-[1400px]:left-[17vw] min-[1400px]:max-w-[62vw]    min-[1645px]:max-w-[60vw]">
                 <motion.img
                   variants={imageVariants}
                   initial="initial"
                   animate="animate"
                   src="images/LallibelaPic.png"
                   alt=""
-                  className="w-full h-full"
+                  className="h-full w-full"
                 />
               </div>
             </div>
