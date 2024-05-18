@@ -76,7 +76,7 @@ const HeroSection = () => {
   };
 
   return (
-    <>
+    <div className="relative">
       {count < 1 && (
         <div className="absolute right-[50%]  top-[50%] flex items-center">
           <span className="loader"></span>
@@ -188,7 +188,7 @@ const HeroSection = () => {
           </>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
