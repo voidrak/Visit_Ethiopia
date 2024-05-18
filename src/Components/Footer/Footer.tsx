@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className="contact-section   rounded-ss-[85px] bg-[#2b2a33] py-16 pl-8 pr-2 min-[450px]:rounded-ss-[200px] min-[450px]:pl-16 min-[450px]:pt-24  ">
       <div className="mx-auto grid gap-y-8 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5   ">
-        <div className="logo-social space-y-3">
+        <div className="  space-y-3">
           <div className="logo flex items-center gap-x-1 ">
             <img src="images//MARA.png" alt="mara logo" />
             <h1 className="mt-1 text-2xl">travel</h1>
@@ -19,7 +19,7 @@ const Footer = () => {
             Let us be your gateway to the captivating beauty and diversity of
             Ethiopia.
           </p>
-          <div className="social flex gap-x-3">
+          <div className="  flex gap-x-3">
             <a
               href="https://www.facebook.com/profile.php?id=100069558991672"
               target="_blank"
