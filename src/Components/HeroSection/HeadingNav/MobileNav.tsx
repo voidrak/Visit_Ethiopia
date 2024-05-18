@@ -20,9 +20,6 @@ const MobileNav = () => {
     { title: "CONTACT", href: "#" },
   ];
 
-  const handleMouseEnter = (): void => setIsHovered(true);
-  const handleMouseLeave = (): void => setIsHovered(false);
-
   useEffect(() => {
     if (isHovered) {
       document.body.style.overflow = "hidden";
@@ -78,7 +75,7 @@ const MobileNav = () => {
         onClick={() => {
           setIsNavOpen(!isNavOpen);
         }}
-        className=" fixed right-2 top-0 z-40 m-[20px] flex  h-[45px] w-[45px] items-center justify-center rounded-full bg-first-accent-color sm:h-[55px] sm:w-[55px] lg:h-[70px] lg:w-[70px]  xl:h-[80px] xl:w-[80px] "
+        className=" bg-first-accent-color fixed right-2 top-0 z-40 m-[20px]  flex h-[45px] w-[45px] items-center justify-center rounded-full sm:h-[55px] sm:w-[55px] lg:h-[70px] lg:w-[70px]  xl:h-[80px] xl:w-[80px] "
       >
         <div className={`  `}>
           <svg
@@ -108,12 +105,12 @@ const MobileNav = () => {
             initial="initial"
             animate="enter"
             exit="exit"
-            className="h-[100vh] w-[100vw] max-w-[481px] bg-bg-color  text-text-color-bold "
+            className="text-text-color-bold h-[100vh] w-[100vw] max-w-[481px]  bg-bg-color "
           >
             <div className="   flex justify-between p-[100px]">
               <div className="  mt-20 flex w-full flex-col gap-4 text-[56px]">
-                <div className="  border-b border-text-color-light text-base  ">
-                  <p className="pb-2 text-text-color-light">Navigation</p>
+                <div className="  border-text-color-light border-b text-base  ">
+                  <p className="text-text-color-light pb-2">Navigation</p>
                 </div>
                 {navBarLink.map((item, index) => (
                   <motion.a
@@ -128,7 +125,7 @@ const MobileNav = () => {
                     animate="enter"
                     exit="exit"
                     href={item.href}
-                    className=" text-[42px]   duration-400 z-10 font-[300] transition-all first-letter:uppercase hover:font-semibold hover:text-gold-accent"
+                    className=" duration-400   z-10 text-[42px] font-[300] transition-all first-letter:uppercase hover:font-semibold hover:text-gold-accent"
                   >
                     {item.title}
                   </motion.a>
