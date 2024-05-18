@@ -83,7 +83,7 @@ const HeroSection = () => {
         </div>
       )}
       <div
-        className={`relative h-screen bg-[url('images/BG-IMG.png')] bg-cover bg-no-repeat ${
+        className={`relative h-screen bg-[url('/images/BG-IMG.png')] bg-cover bg-no-repeat ${
           count > 0 ? "opacity-1" : "opacity-0"
         }`}
       >
