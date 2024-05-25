@@ -45,7 +45,7 @@ const HeroSection = () => {
     animate: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1, easeIn, delay: 0.5 },
+      transition: { duration: 1, easeIn, delay: 1 },
     },
   };
   const containerVariants = {
@@ -71,7 +71,7 @@ const HeroSection = () => {
     animate: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, delay: 1, ease: [0.45, 0, 0.55, 1] },
+      transition: { duration: 1, delay: 1.5, ease: [0.45, 0, 0.55, 1] },
     },
   };
 
