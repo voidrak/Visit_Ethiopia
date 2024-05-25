@@ -1,7 +1,15 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const ShouldVisit = () => {
   return (
-    <div className="  h-screen w-full bg-[url('/images/should_visit_BG.png')] bg-cover bg-no-repeat">
-      <div className="  relative  isolate mt-16  flex h-full w-full flex-col  justify-center overflow-x-hidden from-transparent to-[#212730] pr-3 after:absolute after:left-0 after:top-0 after:-z-[1] after:h-full after:w-full after:bg-gradient-to-br   min-[373px]:pr-4   ">
+    <div className="  relative h-screen w-full   bg-cover bg-no-repeat">
+      <div className="absolute left-0 top-0 z-[-1] h-full w-full ">
+        <LazyLoadImage
+          src="/images/should_visit_BG.webp"
+          alt=""
+          className="h-full w-full"
+        />
+      </div>
+      <div className="relative  isolate  z-10 mt-16  flex h-full w-full flex-col  justify-center overflow-x-hidden from-transparent to-[#212730] pr-3 after:absolute after:left-0 after:top-0 after:-z-[1] after:h-full after:w-full after:bg-gradient-to-br   min-[373px]:pr-4   ">
         <div className="ml-auto flex max-w-[375px] flex-col  items-end sm:max-w-[500px] sm:-translate-x-8  xl:-translate-x-16 2xl:-translate-x-24   ">
           <div className=" ">
             <h1 className=" text-right font-ClashDisplay text-3xl   sm:text-5xl">
@@ -27,10 +35,11 @@ const ShouldVisit = () => {
             </p>
           </div>
           <div className="mt-8">
-            <img
+            <LazyLoadImage
               src="/images/Button2.png"
-              alt=""
+              alt="VISIT ETHIOPIA backgroundImage"
               className="w-[200px] sm:w-[250px]"
+              placeholderSrc="/images/should_visit_BG.webp"
             />
           </div>
         </div>

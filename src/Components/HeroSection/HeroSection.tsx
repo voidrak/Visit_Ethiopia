@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import MobileNav from "./HeadingNav/MobileNav";
 import { motion } from "framer-motion";
 import { easeIn } from "framer-motion/dom";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const HeroSection = () => {
   const [count, setCount] = useState<number>(0);
 
@@ -28,8 +28,8 @@ const HeroSection = () => {
     }
     const img = new Image();
     const img2 = new Image();
-    img.src = "images/BG-IMG.png";
-    img2.src = "images/LallibelaPic.png";
+    img.src = "images/BG-IMG.webp";
+    img2.src = "images/LallibelaPic.webp";
     img.onload = () => {
       setCount(count + 1);
     };
@@ -45,7 +45,7 @@ const HeroSection = () => {
     animate: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1, easeIn, delay: 1.5 },
+      transition: { duration: 1, easeIn, delay: 0.5 },
     },
   };
   const containerVariants = {
@@ -71,7 +71,7 @@ const HeroSection = () => {
     animate: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, delay: 3, ease: [0.45, 0, 0.55, 1] },
+      transition: { duration: 1, delay: 1, ease: [0.45, 0, 0.55, 1] },
     },
   };
 
@@ -83,7 +83,7 @@ const HeroSection = () => {
         </div>
       )}
       <div
-        className={`relative h-screen bg-[url('/images/BG-IMG.png')] bg-cover bg-no-repeat ${
+        className={`relative h-screen bg-[url('/images/BG-IMG.webp')] bg-cover bg-no-repeat ${
           count > 0 ? "opacity-1" : "opacity-0"
         }`}
       >
@@ -96,7 +96,7 @@ const HeroSection = () => {
                   <ul className="flex items-center gap-x-[15px] xl:gap-x-[22px] ">
                     <li className="mara-logo">
                       <a href="#">
-                        <img src="images/MARA.png" alt="mara logo" />
+                        <LazyLoadImage src="images/MARA.png" alt="mara logo" />
                       </a>
                     </li>
                     {navBarLink.map((item) => (
@@ -179,7 +179,7 @@ const HeroSection = () => {
                   variants={imageVariants}
                   initial="initial"
                   animate="animate"
-                  src="images/LallibelaPic.png"
+                  src="images/LallibelaPic.webp"
                   alt=""
                   className="h-full w-full"
                 />

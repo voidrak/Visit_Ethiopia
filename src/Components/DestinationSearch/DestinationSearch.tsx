@@ -1,3 +1,4 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const DestinationSearch = () => {
   return (
     <div className="       mx-auto mt-16 flex w-fit   flex-col justify-center bg-bg-color px-4 sm:mt-32 md:mt-48 lg:flex-row  lg:items-center  lg:px-16  ">
@@ -39,8 +40,8 @@ const DestinationSearch = () => {
         </div>
       </div>
       <div className="airplane-img mx-auto xl:w-[650px] 2xl:w-[750px] ">
-        <img
-          src="images/airplane-img.png"
+        <LazyLoadImage
+          src="images/airplane-img.webp"
           alt="airplane image"
           className="w-full"
         />

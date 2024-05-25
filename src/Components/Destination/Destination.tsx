@@ -1,5 +1,6 @@
 import { useState } from "react";
 import destinationData from "../../Data/destinationData";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 interface data {
   name: string;
   location: string;
@@ -48,7 +49,7 @@ const Destination = () => {
 
   const mappedItems = destinations.map((card: data) => (
     <div
-      className="slider-card relative  mx-auto rounded-[30px] transition-all duration-300 ease-linear flex flex-col h-[555px] justify-end min-w-[300px] min-[373px]:min-w-[355px] max-w-[356px]  after:absolute  after:bg-gradient-to-b from-transparent to-[#161b23] after:w-full after:h-full after:top-0 after:left-0 after:-z-10 after:rounded-[30px] border border-gray-700 "
+      className="slider-card relative  mx-auto flex h-[555px] min-w-[300px] max-w-[356px] flex-col justify-end rounded-[30px] border border-gray-700 from-transparent to-[#161b23]  transition-all  duration-300 ease-linear after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:rounded-[30px] after:bg-gradient-to-b min-[373px]:min-w-[355px] "
       key={card.name}
       style={{
         transform: `translate(-${currentIndex * indexMul}%)`,
@@ -59,8 +60,8 @@ const Destination = () => {
       }}
     >
       <div className="card-info space-y-1 px-2">
-        <h1 className="font-extrabold text-4xl">{card.name}</h1>
-        <p className="card-location flex gap-x-3 text-gold-accent uppercase font-bold">
+        <h1 className="text-4xl font-extrabold">{card.name}</h1>
+        <p className="card-location flex gap-x-3 font-bold uppercase text-gold-accent">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 384 512"
@@ -80,8 +81,8 @@ const Destination = () => {
     </div>
   ));
   return (
-    <div className="mt-16  pr-3 pl-2   mx-auto">
-      <div className="controls-btn lg:px-16 px-4  2xl:px-[6rem]  flex justify-between items-center">
+    <div className="mx-auto  mt-16 pl-2   pr-3">
+      <div className="controls-btn flex items-center  justify-between  px-4 lg:px-16 2xl:px-[6rem]">
         <div className="filter-btn space-x-8">
           <button
             className={`${
@@ -92,7 +93,7 @@ const Destination = () => {
               setActiveButton("All");
             }}
           >
-            <h3 className="font-semibold text-xl lg:text-2xl xl:text-3xl  ">
+            <h3 className="text-xl font-semibold lg:text-2xl xl:text-3xl  ">
               All
             </h3>
           </button>
@@ -107,28 +108,28 @@ const Destination = () => {
               setActiveButton("Nearby");
             }}
           >
-            <h3 className="font-semibold text-xl lg:text-2xl xl:text-3xl   ">
+            <h3 className="text-xl font-semibold lg:text-2xl xl:text-3xl   ">
               Near By
             </h3>
           </button>
         </div>
 
-        <div className="swipe-btn   hidden lg:flex gap-x-4 mr-2">
+        <div className="swipe-btn   mr-2 hidden gap-x-4 lg:flex">
           <button>
-            <img
-              src="images/pervious_arrow.png"
+            <LazyLoadImage
+              src="images/pervious_arrow.webp"
               alt="pervious arrow"
-              className="pervious-arrow  lg:w-[70px] 2xl:w-[85px] w-[50px]"
+              className="pervious-arrow  w-[50px] lg:w-[70px] 2xl:w-[85px]"
               onClick={() => {
                 updateIndex(currentIndex - 1);
               }}
             />
           </button>
           <button>
-            <img
-              src="images/next_arrow.png"
+            <LazyLoadImage
+              src="images/next_arrow.webp"
               alt="next arrow"
-              className="next-arrow lg:w-[70px] 2xl:w-[85px] w-[50px]"
+              className="next-arrow w-[50px] lg:w-[70px] 2xl:w-[85px]"
               onClick={() => {
                 updateIndex(currentIndex + 1);
               }}
@@ -136,10 +137,10 @@ const Destination = () => {
           </button>
         </div>
       </div>
-      <h1 className="card-title mt-8 mb-8 ml-2 lg:px-16 2xl:px-[6rem]  font-extrabold tracking-widest text-3xl xl:text-4xl">
+      <h1 className="card-title mb-8 ml-2 mt-8 text-3xl font-extrabold  tracking-widest lg:px-16 xl:text-4xl 2xl:px-[6rem]">
         Popular Destination
       </h1>
-      <div className=" grid md:grid-cols-2 gap-x-4 lg:flex lg:ml-16  overflow-x-hidden gap-y-8 ">
+      <div className=" grid gap-x-4 gap-y-8 overflow-x-hidden md:grid-cols-2  lg:ml-16 lg:flex ">
         {mappedItems}
       </div>
     </div>

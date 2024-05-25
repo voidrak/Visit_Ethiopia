@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MobileNav from "./MobileNav";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const HeadingNav = () => {
   const [isSearch, setIsSearch] = useState<boolean>(false);
   interface navBar {
@@ -18,14 +18,14 @@ const HeadingNav = () => {
     { title: "CONTACT", href: "#" },
   ];
   return (
-    <div className="absolute top-0 right-0 z-20 w-full cursor-pointer  ">
+    <div className="absolute right-0 top-0 z-20 w-full cursor-pointer  ">
       <MobileNav />
-      <div className="w-full bg-transparent min-[1560px]:p-12 p-8 min-[850px]:flex hidden items-center justify-between">
+      <div className="hidden w-full items-center justify-between bg-transparent p-8 min-[850px]:flex min-[1560px]:p-12">
         <nav className=" ">
-          <ul className="flex gap-x-[15px] xl:gap-x-[22px] items-center ">
+          <ul className="flex items-center gap-x-[15px] xl:gap-x-[22px] ">
             <li className="mara-logo">
               <a href="#">
-                <img src="images/MARA.png" alt="mara logo" />
+                <LazyLoadImage src="images/MARA.png" alt="mara logo" />
               </a>
             </li>
             {navBarLink.map((item) => (
@@ -34,7 +34,7 @@ const HeadingNav = () => {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[17px] lg:text-2xl xl:text-3xl hover:text-gold-accent "
+                  className="text-[17px] hover:text-gold-accent lg:text-2xl xl:text-3xl "
                 >
                   {item.title}
                 </a>
@@ -42,14 +42,14 @@ const HeadingNav = () => {
             ))}
           </ul>
         </nav>
-        <div className="flex gap-4 items-center ">
+        <div className="flex items-center gap-4 ">
           <div
-            className={`flex  items-center gap-x-2  
-            }`}
+            className={`}  flex items-center  
+            gap-x-2`}
           >
             <input
               type="text"
-              className={`rounded-md p-1 transition-all ease-easeInSine duration-300 origin-right text-black border-none outline-none ${
+              className={`origin-right rounded-md border-none p-1 text-black outline-none transition-all duration-300 ease-easeInSine ${
                 !isSearch ? "scale-x-0" : ""
               }`}
             />
@@ -73,7 +73,7 @@ const HeadingNav = () => {
             <select
               name="auth"
               id="auth"
-              className="outline-none bg-gold-accent p-1 rounded-sm"
+              className="rounded-sm bg-gold-accent p-1 outline-none"
             >
               <option value="login">Login</option>
               <option value="signUp">Sign up</option>

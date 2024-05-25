@@ -1,3 +1,4 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import {
   FaFacebookF,
   FaInstagram,
@@ -12,7 +13,7 @@ const Footer = () => {
       <div className="mx-auto grid gap-y-8 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5   ">
         <div className="  space-y-3">
           <div className="logo flex items-center gap-x-1 ">
-            <img src="images//MARA.png" alt="mara logo" />
+            <LazyLoadImage src="images//MARA.png" alt="mara logo" />
             <h1 className="mt-1 text-2xl">travel</h1>
           </div>
           <p className="max-w-[250px] pr-8 font-light text-gray-200">
@@ -136,7 +137,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <LazyLoadImage
                 className="w-[100px]"
                 src="images/PayPal New 2023.svg"
                 alt=""
@@ -147,14 +148,18 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img className="w-[100px]" src="images/MPESA LOGO.png" alt="" />
+              <LazyLoadImage
+                className="w-[100px]"
+                src="images/MPESA LOGO.png"
+                alt=""
+              />
             </a>
             <a
               href="https://coopbankoromia.com.et/e-banking-2-3/e-banking/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <LazyLoadImage
                 className="w-[90px]"
                 src="images/Cooperative Bank of Oromia Logo.svg"
                 alt=""
@@ -165,7 +170,11 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img className="w-[100px]" src="images/Chapa_Logo.svg" alt="" />
+              <LazyLoadImage
+                className="w-[100px]"
+                src="images/Chapa_Logo.svg"
+                alt=""
+              />
             </a>
           </div>
         </div>
